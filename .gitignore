@@ -17,4 +17,5 @@
 /.rvmrc
 /config/database.yml
 /config/environment_variables.rb
+/config/shuttle.yml
 /vendor

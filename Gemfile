@@ -4,6 +4,7 @@ gem 'rails', '3.2.11'
 gem 'pg'
 gem 'jquery-rails'
 gem 'omniauth-facebook-rails', git: 'git://github.com/fbazzarella/omniauth-facebook-rails.git'
+gem 'shuttle'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
