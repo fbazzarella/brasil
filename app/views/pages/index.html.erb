@@ -1,2 +1,8 @@
 <h1>Brasil, mostra tua cara!</h1>
 <%= link_to 'QUERO MOSTRAR MINHA CARA!', '/auth/facebook' %>
+
+<ul>
+  <% @users.each do |user| %>
+    <li><%= image_tag user.photo_url %> - <%= user.name %></li>
+  <% end %>
+</ul>
