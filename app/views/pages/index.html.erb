@@ -3,6 +3,6 @@
 
 <ul>
   <% @users.each do |user| %>
-    <li><%= image_tag user.photo_url %> - <%= user.name %></li>
+    <li><%= image_tag user.photo_url %> - <%= user.name %> - <%= user.city %></li>
   <% end %>
 </ul>
