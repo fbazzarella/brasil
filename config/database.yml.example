@@ -1,0 +1,8 @@
+commom: &commom
+  adapter:  postgresql
+  encoding: utf8
+  username: postgres
+
+development:
+  <<: *commom
+  database: brasil_development

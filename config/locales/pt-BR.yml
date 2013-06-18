@@ -1,0 +1,4 @@
+'pt-BR':
+  time:
+    formats:
+      default: '%A %d/%m/%y %H:%M'
