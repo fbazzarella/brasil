@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/fbazzarella/omniauth-facebook-rails.git
-  revision: 9b74e51fb1718aa324e78ac6507ce6993082a52b
+  revision: 3a3ff0ac14d68ef9b1e28a7eba33a6501d7b2a3b
   specs:
-    omniauth-facebook-rails (0.0.3)
+    omniauth-facebook-rails (0.0.4)
       omniauth-facebook (~> 1.4.1)
       rails (~> 3.2.0)
 
