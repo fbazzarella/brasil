@@ -16,4 +16,5 @@
 
 /.rvmrc
 /config/database.yml
+/config/environment_variables.rb
 /vendor
