@@ -4,6 +4,6 @@
 
 - @brazilians.each do |brazilian|
   %div
-    = image_tag brazilian.photo_url if brazilian.photo_url.present?
+    = image_tag brazilian.photo_url, alt: "Foto do perfil de #{brazilian.first_name}"
     = brazilian.name
     = brazilian.location
