@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def index
-    @users = User.all
+    @brazilians = Brazilian.order('created_at DESC').limit(30)
   end
 end

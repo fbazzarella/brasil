@@ -3,8 +3,8 @@
 = link_to 'QUERO MOSTRAR MINHA CARA!', '/auth/facebook'
 
 %ul
-  - @users.each do |user|
+  - @brazilians.each do |brazilian|
     %li
-      = image_tag user.photo_url
-      = user.name
-      = user.city
+      = image_tag brazilian.photo_url
+      = brazilian.name
+      = brazilian.city
