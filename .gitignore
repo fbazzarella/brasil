@@ -18,4 +18,5 @@
 /config/database.yml
 /config/environment_variables.rb
 /config/shuttle.yml
+/public/assets
 /vendor
