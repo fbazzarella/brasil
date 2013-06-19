@@ -1,0 +1,2 @@
+class Brazilian < User
+end
