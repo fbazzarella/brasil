@@ -13,10 +13,7 @@ gem 'pry-rails',     '0.3.0'
 gem 'awesome_print', '1.1.0'
 
 group :assets do
-  gem 'less-rails',              '2.3.3'
-  gem 'jquery-rails',            '3.0.1'
-  gem 'twitter-bootstrap-rails', '2.2.7'
-
+  gem 'jquery-rails',   '3.0.1'
   gem 'yui-compressor', '0.9.6'
   gem 'therubyracer',   '0.11.4'
 end
