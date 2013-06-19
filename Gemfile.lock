@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/fbazzarella/omniauth-facebook-rails.git
+  revision: 0e18d051ac7a95e1501efee321badc1751e81f44
+  branch: feature/location
+  specs:
+    omniauth-facebook-rails (0.0.3)
+      omniauth-facebook (~> 1.4.1)
+      rails (~> 3.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -83,9 +92,6 @@ GEM
       rack
     omniauth-facebook (1.4.1)
       omniauth-oauth2 (~> 1.1.0)
-    omniauth-facebook-rails (0.0.3)
-      omniauth-facebook (~> 1.4.1)
-      rails (~> 3.2.0)
     omniauth-oauth2 (1.1.1)
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
@@ -173,7 +179,7 @@ DEPENDENCIES
   haml (= 4.0.3)
   jquery-rails (= 3.0.1)
   less-rails (= 2.3.3)
-  omniauth-facebook-rails
+  omniauth-facebook-rails!
   pg (= 0.15.1)
   pry-rails (= 0.3.0)
   quiet_assets (= 1.0.2)

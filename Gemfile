@@ -2,7 +2,10 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 gem 'pg',    '0.15.1'
-gem 'omniauth-facebook-rails'
+
+gem 'omniauth-facebook-rails',
+  git:    'git://github.com/fbazzarella/omniauth-facebook-rails.git',
+  branch: 'feature/location'
 
 gem 'haml',         '4.0.3'
 gem 'jquery-rails', '3.0.1'
