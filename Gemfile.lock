@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/fbazzarella/omniauth-facebook-rails.git
-  revision: 598879a1fed6afa6d7ae4ca269de7ce7c66190e6
+  revision: a8d365937f6af555300c6e2e2a4938fab1cba644
   specs:
-    omniauth-facebook-rails (0.0.6)
+    omniauth-facebook-rails (0.0.7)
       geo_location
       nokogiri (= 1.5.2)
       omniauth-facebook (~> 1.4.1)
