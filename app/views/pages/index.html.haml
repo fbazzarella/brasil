@@ -1,10 +1,9 @@
+= link_to 'QUERO MOSTRAR MINHA CARA!', '/auth/facebook', class: 'btn btn-large btn-success pull-right'
+
 %h1 Brasil, mostra tua cara!
 
-= link_to 'QUERO MOSTRAR MINHA CARA!', '/auth/facebook'
-
-%ul
-  - @brazilians.each do |brazilian|
-    %li
-      = image_tag brazilian.photo_url
-      = brazilian.name
-      = brazilian.location
+- @brazilians.each do |brazilian|
+  %div
+    = image_tag brazilian.photo_url
+    = brazilian.name
+    = brazilian.location
