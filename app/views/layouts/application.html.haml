@@ -6,14 +6,4 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    .navbar.navbar-fixed-top
-      .navbar-inner
-        .container
-          .brand Brasil
-
-          %ul.nav.pull-right
-            %li
-              %a{href: 'http://www.youtube.com/watch?v=NyqPLSLPlGI', target: '_blank'} Brasil, mostra tua cara!
-
-    .container
-      = yield
+    = yield
