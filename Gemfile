@@ -1,19 +1,21 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
-gem 'pg'
+gem 'pg',    '0.15.1'
 gem 'omniauth-facebook-rails', git: 'git://github.com/fbazzarella/omniauth-facebook-rails.git'
 
-gem 'haml'
-gem 'jquery-rails'
+gem 'haml',         '4.0.3'
+gem 'jquery-rails', '3.0.1'
 
-gem 'shuttle'
+gem 'shuttle',       '2.0.1'
 gem 'pry-rails',     '0.3.0'
 gem 'awesome_print', '1.1.0'
 
 group :assets do
-  gem 'therubyracer'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'therubyracer',            '0.11.4'
+  gem 'uglifier',                '>= 1.0.3'
+  gem 'less-rails',              '2.3.3'
+  gem 'twitter-bootstrap-rails', '2.2.7'
 end
 
 group :development do

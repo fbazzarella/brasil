@@ -43,6 +43,7 @@ GEM
     builder (3.0.4)
     coderay (1.0.9)
     colored (1.2)
+    commonjs (0.2.6)
     diff-lcs (1.2.4)
     erubis (2.7.0)
     execjs (1.4.0)
@@ -68,6 +69,11 @@ GEM
     json (1.8.0)
     jwt (0.1.8)
       multi_json (>= 1.5)
+    less (2.3.2)
+      commonjs (~> 0.2.6)
+    less-rails (2.3.3)
+      actionpack (>= 3.1)
+      less (~> 2.3.1)
     libv8 (3.11.8.17)
     mail (2.4.4)
       i18n (>= 0.4.0)
@@ -157,6 +163,11 @@ GEM
     treetop (1.4.14)
       polyglot
       polyglot (>= 0.3.1)
+    twitter-bootstrap-rails (2.2.7)
+      actionpack (>= 3.1)
+      execjs
+      rails (>= 3.1)
+      railties (>= 3.1)
     tzinfo (0.3.37)
     uglifier (2.1.1)
       execjs (>= 0.3.0)
@@ -168,15 +179,17 @@ PLATFORMS
 DEPENDENCIES
   awesome_print (= 1.1.0)
   factory_girl_rails (= 4.2.1)
-  haml
-  jquery-rails
+  haml (= 4.0.3)
+  jquery-rails (= 3.0.1)
+  less-rails (= 2.3.3)
   omniauth-facebook-rails!
-  pg
+  pg (= 0.15.1)
   pry-rails (= 0.3.0)
   quiet_assets (= 1.0.2)
   rails (= 3.2.11)
   rspec-rails (= 2.13.2)
   shoulda-matchers (= 2.1.0)
-  shuttle
-  therubyracer
+  shuttle (= 2.0.1)
+  therubyracer (= 0.11.4)
+  twitter-bootstrap-rails (= 2.2.7)
   uglifier (>= 1.0.3)
