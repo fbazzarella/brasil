@@ -54,6 +54,8 @@ GEM
     faraday (0.8.7)
       multipart-post (~> 1.1)
     geo_location (0.4.2)
+    haml (4.0.3)
+      tilt
     hashie (2.0.5)
     hike (1.2.3)
     httpauth (0.2.0)
@@ -146,6 +148,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  haml
   jquery-rails
   omniauth-facebook-rails!
   pg
