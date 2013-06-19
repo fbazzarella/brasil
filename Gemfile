@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.11'
 gem 'thin',  '1.5.1'
 gem 'pg',    '0.15.1'
+gem 'mypg',  '0.0.1'
 gem 'haml',  '4.0.3'
 
 gem 'omniauth-facebook-rails',
