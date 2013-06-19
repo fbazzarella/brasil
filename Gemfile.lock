@@ -1,10 +1,10 @@
 GIT
   remote: git://github.com/fbazzarella/omniauth-facebook-rails.git
-  revision: 24f88530ddf9bcccb48184c2b80dc8a5e1ab7861
+  revision: 598879a1fed6afa6d7ae4ca269de7ce7c66190e6
   specs:
-    omniauth-facebook-rails (0.0.5)
+    omniauth-facebook-rails (0.0.6)
       geo_location
-      nokogiri
+      nokogiri (= 1.5.2)
       omniauth-facebook (~> 1.4.1)
       rails (~> 3.2.0)
 
@@ -71,11 +71,9 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.23)
-    mini_portile (0.5.0)
     multi_json (1.7.7)
     multipart-post (1.2.0)
-    nokogiri (1.6.0)
-      mini_portile (~> 0.5.0)
+    nokogiri (1.5.2)
     oauth2 (0.8.1)
       faraday (~> 0.8)
       httpauth (~> 0.1)
