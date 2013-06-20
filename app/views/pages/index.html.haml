@@ -3,7 +3,7 @@
     .change-our-country
       - if current_user.present?
         .idea.viva-la-revolucion= "#{current_user.name},<br />você já faz parte desta revolução *--*".html_safe
-        = link_to 'Sair', '/logout', class: 'logout'
+        = link_to '(mostrar a cara de outra pessoa)', '/logout', class: 'logout', title: 'Você precisa deslogar do Facebook antes :-)'
         .idea
           Agora compartilhe com seus amigos
           %br

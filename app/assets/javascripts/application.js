@@ -14,7 +14,7 @@
 //= require jquery.tipsy
 
 $(function(){
-  $('.brazilian').tipsy({gravity: 's'});
+  $('.brazilian, .logout').tipsy({gravity: 's'});
 
   $('.idea').click(function(){
     var section = $($(this).data("section"));
