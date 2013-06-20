@@ -11,3 +11,8 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require jquery.tipsy
+
+$(function(){
+  $('.brazilian').tipsy({gravity: 's'});
+});

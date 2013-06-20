@@ -22,7 +22,8 @@
         %ul.brazilians
           - @brazilians.each do |brazilian|
             %li
-              = image_tag brazilian.photo_url, alt: "Foto do perfil de #{brazilian.first_name}"
+              %a.brazilian{title: "#{brazilian.name} - #{brazilian.location}"}
+                = image_tag brazilian.photo_url, alt: "Foto do perfil de #{brazilian.first_name}"
 
       - if @total_other_people > 0
         %p
