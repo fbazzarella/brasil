@@ -12,6 +12,14 @@ describe Brazilian do
     it { expect(described_class.recent.first).to be_eql(described_class.last) }
   end
 
+  describe 'scope .with_photo' do
+    let!(:with_photo)    { FactoryGirl.create(:brazilian, photo_url: 'http://example.com/image.jpg') }
+    let!(:without_photo) { FactoryGirl.create(:brazilian, photo_url: nil) }
+
+    it { expect(described_class.with_photo).to include(with_photo) }
+    it { expect(described_class.with_photo).to_not include(without_photo) }
+  end
+
   describe '.count' do
     let!(:people_count) { described_class::TOTAL_PEOPLE_TO_SHOW + 1 }
 
