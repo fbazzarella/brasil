@@ -1,12 +1,21 @@
 .container
   .pull-right
     .change-our-country
-      = link_to 'QUERO MUDAR O BRASIL!', '/auth/facebook', class: 'btn btn-custom'
+      - if current_user.present?
+        .idea.viva-la-revolucion= "#{current_user.name},<br />você já faz parte desta revolução *--*".html_safe
+        = link_to 'Sair', '/logout', class: 'logout'
+        .idea
+          Agora compartilhe com seus amigos
+          %br
+          e espalhe essa ideia!
 
-      %a.idea{href: '#', :'data-section' => '.disclaimer'}
-        Antes, quero entender a ideia e
-        %br
-        o objetivo central.
+      - else
+        = link_to 'QUERO MUDAR O BRASIL!', '/auth/facebook', class: 'btn btn-custom'
+
+        %a.idea{href: '#', :'data-section' => '.disclaimer'}
+          Antes, quero entender a ideia e
+          %br
+          o objetivo central.
 
       = render './addthis'
 
