@@ -30,6 +30,11 @@ a:hover {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 .container {
   margin: 0 auto;
   width: 1000px;
@@ -91,13 +96,11 @@ a:hover {
   color: #FC0;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+.index ul {
   max-width: 580px;
 }
 
-li {
+.index li {
   display: inline-block;
   border: 2px solid #FC0;
   -webkit-border-radius: 27px 27px 27px 27px;
@@ -122,13 +125,44 @@ li {
 }
 
 .disclaimer {
-  margin: 100px 0;
+  margin: 100px 0 150px;
 }
 
 .disclaimer p {
   max-width: 580px;
   font-size: 1.4em;
   line-height: 1.5em;
+}
+
+.who {
+  margin: 100px 0;
+}
+
+.who li {
+  display: block;
+  height: 130px;
+}
+
+.who .brazilian {
+  display: inline-block;
+  float: left;
+  background-color: #000;
+  border: 2px solid #FC0;
+  -webkit-border-radius: 100px 100px 100px 100px;
+     -moz-border-radius: 100px 100px 100px 100px;
+          border-radius: 100px 100px 100px 100px;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.who div {
+  float: left;
+  margin: 15px 0 0 20px;
+}
+
+.who p {
+  margin: 0 0 5px;
 }
 
 .btn-custom {
