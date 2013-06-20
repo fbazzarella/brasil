@@ -13,7 +13,7 @@ describe Brazilian do
   end
 
   describe 'scope .with_photo' do
-    let!(:with_photo)    { FactoryGirl.create(:brazilian, photo_url: 'http://example.com/image.jpg') }
+    let!(:with_photo)    { FactoryGirl.create(:brazilian) }
     let!(:without_photo) { FactoryGirl.create(:brazilian, photo_url: nil) }
 
     it { expect(described_class.with_photo).to include(with_photo) }
