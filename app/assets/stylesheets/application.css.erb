@@ -12,8 +12,68 @@
  */
 
 body {
-  background-image: url('<%= image_path('background.jpg') %>');
-  background-position: center top;
+  background: fixed url('<%= image_path('background.jpg') %>') center top;
   font-family: 'Bariol', sans-serif;
   color: #FFF;
+}
+
+a,
+a:active,
+a:visited,
+a:hover {
+  color: #FFF;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.pull-right {
+  float: right;
+  margin-top: 0;
+}
+
+.content {
+  text-shadow: 2px 2px 3px #000;
+}
+
+.index, .disclaimer {
+  margin: 100px 0;
+}
+
+.index h1 {
+  font-size: 1.8em;
+}
+
+.index h2 {
+  font-size: 2.6em;
+  color: #FC0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 580px;
+}
+
+li {
+  display: inline-block;
+  border: 2px solid #FC0;
+  -webkit-border-radius: 27px 27px 27px 27px;
+     -moz-border-radius: 27px 27px 27px 27px;
+          border-radius: 27px 27px 27px 27px;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.people {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #FC0;
 }

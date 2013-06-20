@@ -1,9 +1,30 @@
-= link_to 'QUERO MOSTRAR MINHA CARA!', '/auth/facebook'
+.container
+  .pull-right
+    = link_to 'QUERO MOSTRAR MINHA CARA!', '/auth/facebook'
 
-%h1 Brasil, mostra tua cara!
+  .content
+    .index
+      %h1
+        O povo brasileiro mostrou que está disposto
+        %br
+        à mudar nosso país. Faça parte do nosso manifesto.
 
-- @brazilians.each do |brazilian|
-  %div
-    = image_tag brazilian.photo_url, alt: "Foto do perfil de #{brazilian.first_name}"
-    = brazilian.name
-    = brazilian.location
+      %h2 Brasil, mostra tua cara!
+
+      %p Quem já mostrou a cara...
+
+      - if @brazilians.any?
+        %ul.brazilians
+          - @brazilians.each do |brazilian|
+            %li
+              = image_tag brazilian.photo_url, alt: "Foto do perfil de #{brazilian.first_name}"
+
+      %p
+        \...e mais
+        %span.people 123.000 pessoas
+        no Brasil e no mundo.
+
+      %a{href: '#'} Quero ver a lista completa.
+
+    .disclaimer
+      %h1 Disclaimer...
