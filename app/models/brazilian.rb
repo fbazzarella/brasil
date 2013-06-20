@@ -5,7 +5,7 @@ class Brazilian < User
   scope :with_photo, -> { where('photo_url IS NOT NULL') }
 
   def self.total_other_people
-    self.count - TOTAL_PEOPLE_TO_SHOW
+    self.with_photo.count - TOTAL_PEOPLE_TO_SHOW
   end
 
   def first_name
