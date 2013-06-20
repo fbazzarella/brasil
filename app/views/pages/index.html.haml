@@ -1,13 +1,14 @@
 .container
   .pull-right
-    = link_to 'QUERO MUDAR O BRASIL!', '/auth/facebook', class: 'btn btn-custom'
+    .change-our-country
+      = link_to 'QUERO MUDAR O BRASIL!', '/auth/facebook', class: 'btn btn-custom'
 
-    %a.idea{href: '#', :'data-section' => '.disclaimer'}
-      Antes, quero entender a ideia e
-      %br
-      o objetivo central.
+      %a.idea{href: '#', :'data-section' => '.disclaimer'}
+        Antes, quero entender a ideia e
+        %br
+        o objetivo central.
 
-    = render './addthis'
+      = render './addthis'
 
   .content
     .index
@@ -34,7 +35,7 @@
             = pluralize @total_other_people, 'pessoa', 'pessoas'
           no Brasil e no mundo.
 
-        %a{href: '#'} Quero ver a lista completa.
+        / %a{href: '#'} Quero ver a lista completa.
 
     .disclaimer
       %a{name: 'disclaimer'}
