@@ -11,4 +11,8 @@ class Brazilian < User
   def first_name
     name.split.first
   end
+
+  def who_is
+    [name, location].reject{ |v| v.blank? }.join(' - ')
+  end
 end

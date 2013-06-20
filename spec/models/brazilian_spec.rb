@@ -33,4 +33,18 @@ describe Brazilian do
 
     it { expect(brazilian.first_name).to be_eql('John') }
   end
+
+  describe '#who_is' do
+    context 'when location is present' do
+      let(:brazilian) { FactoryGirl.create(:brazilian, location: 'New York, US') }
+
+      it { expect(brazilian.who_is).to be_eql('John Doe - New York, US') }
+    end
+
+    context 'when location is not present' do
+      let(:brazilian) { FactoryGirl.create(:brazilian, location: nil) }
+
+      it { expect(brazilian.who_is).to be_eql('John Doe') }
+    end
+  end
 end
