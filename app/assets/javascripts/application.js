@@ -15,4 +15,11 @@
 
 $(function(){
   $('.brazilian').tipsy({gravity: 's'});
+
+  $('.idea').click(function(){
+    var section = $($(this).data("section"));
+    var top = section.offset().top - 50;
+    $("html, body").animate({ scrollTop: top }, 700);
+    return false;
+  });
 });
