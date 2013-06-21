@@ -31,19 +31,14 @@ describe Brazilian do
       it { expect(subject).to include(with_photo) }
       it { expect(subject).to_not include(without_photo) }
     end
+  end
 
-    describe '.entire_list' do
-      let!(:first)         { FactoryGirl.create(:brazilian) }
-      let!(:without_photo) { FactoryGirl.create(:brazilian, photo_url: nil) }
-      let!(:last)          { FactoryGirl.create(:brazilian) }
+  describe '.total_other_people' do
+    let!(:people_count) { described_class::TOTAL_PEOPLE_TO_SHOW + 1 }
 
-      subject { described_class.entire_list }
+    before { people_count.times { FactoryGirl.create(:brazilian) } }
 
-      it { expect(subject.count).to be_eql(2) }
-      it { expect(subject).to_not include(without_photo) }
-      it { expect(subject.first.id).to be_eql(last.id) }
-      it { expect(subject.last.id).to be_eql(first.id) }
-    end
+    it { expect(described_class.total_other_people).to be_eql(people_count - described_class::TOTAL_PEOPLE_TO_SHOW) }
   end
 
   describe '.entire_list_in_json' do
@@ -54,14 +49,6 @@ describe Brazilian do
 
     it { expect(subject).to match /\"who_is\"\:\"John Doe - New York\"/ }
     it { expect(subject).to_not match /\"who_is\"\:\"Anonymous\"/ }
-  end
-
-  describe '.count' do
-    let!(:people_count) { described_class::TOTAL_PEOPLE_TO_SHOW + 1 }
-
-    before { people_count.times { FactoryGirl.create(:brazilian) } }
-
-    it { expect(described_class.total_other_people).to be_eql(people_count - described_class::TOTAL_PEOPLE_TO_SHOW) }
   end
 
   describe '#first_name' do

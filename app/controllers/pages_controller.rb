@@ -7,7 +7,7 @@ class PagesController < ApplicationController
       end
 
       f.json do
-        render json: @brazilians = Brazilian.entire_list.to_json
+        render json: Brazilian.entire_list_in_json
       end
     end
   end
