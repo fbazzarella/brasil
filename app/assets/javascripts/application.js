@@ -14,7 +14,10 @@
 //= require jquery.tipsy
 
 $(function(){
-  $('.brazilian, .logout').tipsy({gravity: 's'});
+  $('.brazilian, .logout a').tipsy({
+    gravity: 's',
+    opacity: 1
+  });
 
   $('.scroller').click(function(){
     var section = $($(this).data("section"));
