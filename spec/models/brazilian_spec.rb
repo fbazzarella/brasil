@@ -27,6 +27,19 @@ describe Brazilian do
       it { expect(described_class.with_photo).to include(with_photo) }
       it { expect(described_class.with_photo).to_not include(without_photo) }
     end
+
+    describe '.entire_list' do
+      let!(:first)         { FactoryGirl.create(:brazilian) }
+      let!(:without_photo) { FactoryGirl.create(:brazilian, photo_url: nil) }
+      let!(:last)          { FactoryGirl.create(:brazilian) }
+
+      subject { described_class.entire_list }
+
+      it { expect(subject.count).to be_eql(2) }
+      it { expect(subject).to_not include(without_photo) }
+      it { expect(subject.first.id).to be_eql(last.id) }
+      it { expect(subject.last.id).to be_eql(first.id) }
+    end
   end
 
   describe '.count' do

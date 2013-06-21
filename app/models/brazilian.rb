@@ -4,6 +4,7 @@ class Brazilian < User
   scope :reverse,     -> { order('created_at DESC') }
   scope :recent,      -> { limit(TOTAL_PEOPLE_TO_SHOW).reverse }
   scope :with_photo,  -> { where('photo_url IS NOT NULL') }
+  scope :entire_list, -> { select([:id, :name, :location, :photo_url]).with_photo.reverse }
 
   def self.total_other_people
     self.with_photo.count - TOTAL_PEOPLE_TO_SHOW
