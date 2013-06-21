@@ -1,23 +1,32 @@
 require 'spec_helper'
 
 describe Brazilian do
-  describe 'scope .recent' do
-    let!(:people_count) { described_class::TOTAL_PEOPLE_TO_SHOW }
+  describe 'scopes' do
+    describe '.reverse' do
+      let!(:first) { FactoryGirl.create(:brazilian) }
+      let!(:last)  { FactoryGirl.create(:brazilian) }
 
-    before do
-      people_count.times { FactoryGirl.create(:brazilian) }
+      it { expect(described_class.reverse.first).to be_eql(last) }
+      it { expect(described_class.reverse.last).to be_eql(first) }
     end
 
-    it { expect(described_class.recent.count).to be_eql(people_count) }
-    it { expect(described_class.recent.first).to be_eql(described_class.last) }
-  end
+    describe '.recent' do
+      let!(:people_count) { described_class::TOTAL_PEOPLE_TO_SHOW }
 
-  describe 'scope .with_photo' do
-    let!(:with_photo)    { FactoryGirl.create(:brazilian) }
-    let!(:without_photo) { FactoryGirl.create(:brazilian, photo_url: nil) }
+      before do
+        people_count.times { FactoryGirl.create(:brazilian) }
+      end
 
-    it { expect(described_class.with_photo).to include(with_photo) }
-    it { expect(described_class.with_photo).to_not include(without_photo) }
+      it { expect(described_class.recent.count).to be_eql(people_count) }
+    end
+
+    describe '.with_photo' do
+      let!(:with_photo)    { FactoryGirl.create(:brazilian) }
+      let!(:without_photo) { FactoryGirl.create(:brazilian, photo_url: nil) }
+
+      it { expect(described_class.with_photo).to include(with_photo) }
+      it { expect(described_class.with_photo).to_not include(without_photo) }
+    end
   end
 
   describe '.count' do
