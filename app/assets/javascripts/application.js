@@ -20,9 +20,7 @@ $(function(){
   });
 
   $('.scroller').click(function(){
-    var section = $($(this).data("section"));
-    var top = section.offset().top - 110;
-    $("html, body").animate({ scrollTop: top }, 700);
+    $('html, body').animate({ scrollTop: $('.disclaimer').offset().top - 110 }, 700);
     return false;
   });
 });
