@@ -16,7 +16,7 @@
 $(function(){
   $('.brazilian, .logout').tipsy({gravity: 's'});
 
-  $('.idea').click(function(){
+  $('.scroller').click(function(){
     var section = $($(this).data("section"));
     var top = section.offset().top - 110;
     $("html, body").animate({ scrollTop: top }, 700);

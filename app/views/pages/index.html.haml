@@ -1,28 +1,39 @@
 .container
-  .pull-right
-    .change-our-country
-      - if current_user.present?
-        .idea.viva-la-revolucion= "#{current_user.name},<br />você já faz parte desta revolução *--*".html_safe
-        = link_to '(mostrar a cara de outra pessoa)', '/logout', class: 'logout', title: 'Você precisa deslogar do Facebook antes :-)'
-        .idea
-          Agora compartilhe com seus amigos
-          %br
-          e espalhe essa ideia!
+  .change-our-country
+    - if current_user.present?
+      .idea
+        = current_user.name
+        ,
+        %br
+        você já faz parte desta revolução *--*
 
-      - else
-        = link_to 'CLIQUE AQUI E MUDE O <span class="brazil">BRASIL!</span>'.html_safe, '/auth/facebook', class: 'btn btn-custom'
+      .logout
+        (
+        %a{href: '/logout'} mostrar a cara de outra pessoa
+        )
 
-        %a.idea{href: '#', :'data-section' => '.disclaimer'}
+      .idea
+        Agora compartilhe com seus amigos
+        %br
+        e espalhe essa ideia!
+
+    - else
+      %a.btn.btn-custom{href: '/auth/facebook'}
+        CLIQUE AQUI E MUDE O
+        %span.brazil BRASIL!
+
+      %p.idea
+        %a.scroller{href: '#', :'data-section' => '.disclaimer'}
           Antes, quero entender a ideia e
           %br
           o objetivo central.
 
-      = render './addthis'
+    = render './addthis'
 
-      %p.hashtag
-        Acompanhar
-        %a{href: 'https://twitter.com/search?q=%23MostraTuaCara', target: '_blank', title: 'Acompanhar no Twitter'} #MostraTuaCara
-        no Twitter.
+    %p.hashtag
+      Acompanhar
+      %a{href: 'https://twitter.com/search?q=%23MostraTuaCara', target: '_blank', title: 'Acompanhar no Twitter'} #MostraTuaCara
+      no Twitter.
 
   .content
     .index
@@ -52,8 +63,6 @@
         / %a{href: '#'} Quero ver a lista completa.
 
     .disclaimer
-      %a{name: 'disclaimer'}
-
       %h1 Entenda...
 
       %p
