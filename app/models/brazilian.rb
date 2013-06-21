@@ -6,6 +6,10 @@ class Brazilian < User
   scope :with_photo,  -> { where('photo_url IS NOT NULL') }
   scope :entire_list, -> { select([:id, :name, :location, :photo_url]).with_photo.reverse }
 
+  def self.entire_list_in_json
+    self.with_photo.reverse.to_json(methods: :who_is, only: :photo_url)
+  end
+
   def self.total_other_people
     self.with_photo.count - TOTAL_PEOPLE_TO_SHOW
   end

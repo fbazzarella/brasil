@@ -46,6 +46,16 @@ describe Brazilian do
     end
   end
 
+  describe '.entire_list_in_json' do
+    let!(:with_location) { FactoryGirl.create(:brazilian, name: 'John Doe', location: 'New York') }
+    let!(:without_photo) { FactoryGirl.create(:brazilian, name: 'Anonymous', photo_url: nil) }
+
+    subject { described_class.entire_list_in_json }
+
+    it { expect(subject).to match /\"who_is\"\:\"John Doe - New York\"/ }
+    it { expect(subject).to_not match /\"who_is\"\:\"Anonymous\"/ }
+  end
+
   describe '.count' do
     let!(:people_count) { described_class::TOTAL_PEOPLE_TO_SHOW + 1 }
 
