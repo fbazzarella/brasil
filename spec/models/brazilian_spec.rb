@@ -6,8 +6,10 @@ describe Brazilian do
       let!(:first) { FactoryGirl.create(:brazilian) }
       let!(:last)  { FactoryGirl.create(:brazilian) }
 
-      it { expect(described_class.reverse.first).to be_eql(last) }
-      it { expect(described_class.reverse.last).to be_eql(first) }
+      subject { described_class.reverse }
+
+      it { expect(subject.first).to be_eql(last) }
+      it { expect(subject.last).to be_eql(first) }
     end
 
     describe '.recent' do
@@ -24,8 +26,10 @@ describe Brazilian do
       let!(:with_photo)    { FactoryGirl.create(:brazilian) }
       let!(:without_photo) { FactoryGirl.create(:brazilian, photo_url: nil) }
 
-      it { expect(described_class.with_photo).to include(with_photo) }
-      it { expect(described_class.with_photo).to_not include(without_photo) }
+      subject { described_class.with_photo }
+
+      it { expect(subject).to include(with_photo) }
+      it { expect(subject).to_not include(without_photo) }
     end
 
     describe '.entire_list' do
