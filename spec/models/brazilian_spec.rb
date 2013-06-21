@@ -47,6 +47,7 @@ describe Brazilian do
 
     subject { described_class.entire_list_in_json }
 
+    it { expect(subject).to match /\"first_name\"\:\"John\"/ }
     it { expect(subject).to match /\"who_is\"\:\"John Doe - New York\"/ }
     it { expect(subject).to_not match /\"who_is\"\:\"Anonymous\"/ }
   end

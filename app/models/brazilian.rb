@@ -10,7 +10,7 @@ class Brazilian < User
   end
 
   def self.entire_list_in_json
-    self.with_photo.reverse.to_json(methods: :who_is, only: :photo_url)
+    self.with_photo.reverse.to_json(methods: [:first_name, :who_is], only: :photo_url)
   end
 
   def first_name
