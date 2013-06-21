@@ -40,7 +40,7 @@
       %h1
         O povo brasileiro mostrou que está disposto
         %br
-        à mudar nosso país. Faça parte do nosso manifesto.
+        a mudar nosso país. Faça parte do nosso manifesto.
 
       %h2 Brasil, mostra tua cara!
 
@@ -54,13 +54,13 @@
                 = image_tag brazilian.photo_url, alt: "Foto do perfil de #{brazilian.first_name}"
 
       - if @total_other_people > 0
-        %p
+        %p.total-other-people
           \...e mais
-          %span.people
+          %span
             = pluralize @total_other_people, 'pessoa', 'pessoas'
           no Brasil e no mundo.
 
-        / %a{href: '#'} Quero ver a lista completa.
+        / %a.entire-list{href: '#'} Quero ver a lista completa.
 
     .disclaimer
       %h1 Entenda...
