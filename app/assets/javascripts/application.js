@@ -18,7 +18,7 @@ $(function(){
 
   $('.idea').click(function(){
     var section = $($(this).data("section"));
-    var top = section.offset().top - 100;
+    var top = section.offset().top - 110;
     $("html, body").animate({ scrollTop: top }, 700);
     return false;
   });
