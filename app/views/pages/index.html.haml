@@ -53,6 +53,8 @@
               %a.brazilian{title: "#{brazilian.who_is}"}
                 = image_tag brazilian.photo_url, alt: "Foto do perfil de #{brazilian.first_name}"
 
+      .clear
+
       - if @total_other_people > 0
         %p.total-other-people
           \...e mais
