@@ -44,9 +44,9 @@
 
       %h2 Brasil, mostra tua cara!
 
-      %p Quem já mostrou a cara...
-
       - if @brazilians.any?
+        %p Quem já mostrou a cara...
+
         %ul.brazilians
           - @brazilians.each do |brazilian|
             %li

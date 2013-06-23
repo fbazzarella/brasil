@@ -28,11 +28,11 @@ var brazilianTemplate = function(firstName, whoIs, photoUrl){
 };
 
 var loadTipsy = function(element){
-  element.tipsy({gravity: 's', opacity: 1});
+  $(element).tipsy({gravity: 's', opacity: 1});
 };
 
 $(function(){
-  loadTipsy($('.brazilian, .logout a'));
+  loadTipsy('.brazilian, .logout a');
 
   $('.scroller').click(function(){
     $('html, body').animate({ scrollTop: $('.disclaimer').offset().top - 110 }, 700);
@@ -42,7 +42,7 @@ $(function(){
   $('.entire-list').click(function(){
     $.getJSON('/pages.json', function(brazilians){
       renderBrazilians($('.brazilians'), brazilians);
-      loadTipsy($('.brazilian'));
+      loadTipsy('.brazilian');
     });
   });
 
