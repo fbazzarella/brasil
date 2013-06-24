@@ -1,14 +1,14 @@
 !!!5
 %html
-  %head>
+  %head
     %title Brasil, mostra tua cara!
     = tag :meta, charset: 'utf-8'
     = tag :meta, name: 'description', content: 'O povo brasileiro mostrou que está disposto à mudar nosso país. Faça parte do nosso manifesto.'
     = tag :meta, property: 'og:image', content: "#{root_url[0..-2] + image_path('og_image.jpg')}"
 
-    = stylesheet_link_tag    "fonts/bariol", media: "all"
-    = stylesheet_link_tag    "application",  media: "all"
-    = javascript_include_tag "application"
+    = stylesheet_link_tag    'fonts/bariol', media: 'all'
+    = stylesheet_link_tag    'application',  media: 'all'
+    = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
     = yield

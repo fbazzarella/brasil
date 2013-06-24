@@ -14,16 +14,16 @@
 //= require jquery.tipsy
 
 var renderBrazilians = function(container, brazilians) {
-  var c = container.empty();
+  var c = $(container).empty();
 
   for(i = 0; i < brazilians.length; i++){
     var b = brazilians[i];
-    var t = brazilianTemplate(b.first_name, b.who_is, b.photo_url);
+    var t = brazilianTemplate(b.who_is, b.photo_url, b.first_name);
     c.append(t);
   };
 };
 
-var brazilianTemplate = function(firstName, whoIs, photoUrl){
+var brazilianTemplate = function(whoIs, photoUrl, firstName){
   return '<li><a class="brazilian" title="' + whoIs + '"><img src="' + photoUrl + '" alt="Foto do perfil de ' + firstName + '" /></a></li>'
 };
 
@@ -35,13 +35,13 @@ $(function(){
   loadTipsy('.brazilian, .logout a');
 
   $('.scroller').click(function(){
-    $('html, body').animate({ scrollTop: $('.disclaimer').offset().top - 110 }, 700);
+    $('html, body').animate({scrollTop: $('.disclaimer').offset().top - 110}, 700);
     return false;
   });
 
   $('.entire-list').click(function(){
     $.getJSON('/pages.json', function(brazilians){
-      renderBrazilians($('.brazilians'), brazilians);
+      renderBrazilians('.brazilians', brazilians);
       loadTipsy('.brazilian');
     });
   });
