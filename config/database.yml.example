@@ -1,8 +1,26 @@
-commom: &commom
+common: &common
   adapter:  postgresql
   encoding: utf8
+
+local: &local
+  <<: *common
   username: postgres
 
 development:
-  <<: *commom
+  <<: *local
   database: brasil_development
+
+test:
+  <<: *local
+  database: brasil_test
+
+staging:
+  <<: *local
+  database: brasil_staging
+
+production:
+  <<: *commom
+  host:     _ip
+  username: _user
+  password: _secret
+  database: brasil_production
